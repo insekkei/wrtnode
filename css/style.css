@@ -29,13 +29,13 @@ nav>ul>li{
     cursor:pointer;
 }
 .current{
-    text-decoration:underline;
+    border-bottom:1px solid #221815;
 }
 .current span{
     color:#e6ae30;
 }
 nav li a{
-	cursor:pointer;
+    cursor:pointer;
 }
 li.unlink{
     cursor: not-allowed;
@@ -56,7 +56,7 @@ nav ul ul{
     display:none;
 }
 nav ul ul.active{
-	display: inline-block;
+    display: inline-block;
 }
 nav ul ul a{color:#eee;}
 nav li li{position:relative;}
@@ -138,4 +138,55 @@ footer>div h3{
 footer .has-border{
     border-right:1px solid #626262;
     width:33%;
+}
+/*service.html*/
+.service-caption{
+    padding:90px 0;
+}
+.service-caption img{
+   float:left;
+   width:40%;   
+   margin-left:5%;
+}
+.service-caption h2,.service-caption p{
+    width:40%;
+    float:right;
+    margin-right:10%;
+}
+.service-caption h2{
+    color: #424242;
+    font-size: 25px;
+    white-space: nowrap;
+    font-weight: 700;
+    margin-bottom:30px;
+}
+.service-caption h2 span{
+    display:block;
+    color:#e6ae30;
+}
+.hard-list{
+    margin-bottom:10px;
+}
+.hard-list>div{
+    width:25%;
+    float:left;
+}
+.hard-list>div .actions{
+    position:relative;
+    top:-10px;
+}
+.actions{
+    text-align:right;
+}
+.button{
+    border: 1px solid #e6ae30;
+    color:#e6ae30;
+    background:#f6e5bf;
+    display:inline-block;
+    padding:8px 26px;
+    cursor:pointer;
+}
+.button.primary{
+    background:#e6ae30;
+    color:#fff;
 }

@@ -80,31 +80,31 @@
     height: 100%;
     min-height: 1px;
 }
-.slick-slide a{
+.slick-slide a,.hard-list a{
     display:block;
     background: #fff;
-    margin: 2px;
+    margin: 3px 2px;
     overflow:hidden;
 }
-.slick-slide a img{
+.slick-slide a img,.hard-list a img{
     -webkit-transition: all .4s ease-in;
     -moz-transition: all .4s ease-in;
     -o-transition: all .4s ease-in;
     -ms-transition: all .4s ease-in;
     transition: all .4s ease-in;
 }
-.slick-slide a:hover img{
+.slick-slide a:hover img,.hard-list a:hover img{
     -webkit-transform:scale(1.1) translateY(-5%);
     -moz-transform:scale(1.1) translateY(-5%);
     -o-transform:scale(1.1) translateY(-5%);
     -ms-transform:scale(1.1) translateY(-5%);
     transform:scale(1.1) translateY(-5%);
 }
-.slick-slide a h3,.slick-slide a p{
+.slick-slide a h3,.slick-slide a p,.hard-list a h3,.hard-list a p{
     padding:40px 20px 0 20px;
     color:#221d1f;
 }
-.slick-slide a p{
+.slick-slide a p,.hard-list a p{
     padding-top:10px;
     padding-bottom:40px;
     font-size: 13px;
@@ -114,7 +114,7 @@
 {
     float: right;
 }
-.slick-slide img
+.slick-slide img,.hard-list img
 {
     display: block;
     width: 100%;
