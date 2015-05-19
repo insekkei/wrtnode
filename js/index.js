@@ -20,5 +20,18 @@ $(function() {
 		$(this).children('ul').addClass('active');
 	});
 
+	//购买和定制
+	$('.hard-list .actions .button').click(function(e){
+		$('.overlay').animate({
+			'right':'0'
+		});
+		e.preventDefault();
+	});
 
+	$('.close').click(function(e){
+		$(this).parent('.overlay').animate({
+			'right':'-110%'
+		});
+		e.preventDefault();
+	});
 });
