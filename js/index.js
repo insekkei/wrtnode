@@ -21,17 +21,32 @@ $(function() {
 	});
 
 	//购买和定制
-	$('.hard-list .actions .button').click(function(e){
+	$('.hard-list .actions .button').click(function(e){		
+		$this = $(this);
 		$('.overlay').animate({
 			'right':'0'
 		});
+		if($this.attr('class').match('buy')=='buy'){
+			$('.form.buy').fadeIn();
+			$('.form.buy').siblings('form').fadeOut(0);
+		}
+		if($this.attr('class').match('diy')=='diy'){
+			$('.form.diy').fadeIn();
+			$('.form.diy').siblings('form').fadeOut(0);
+		}
+		
 		e.preventDefault();
 	});
 
-	$('.close').click(function(e){
-		$(this).parent('.overlay').animate({
+	$('.close,.sure').click(function(e){
+		$('.overlay').animate({
 			'right':'-110%'
 		});
+		$('.succeed-info').fadeOut();
 		e.preventDefault();
+	});
+
+	$('#submit-mul-form').click(function(e){
+		$('.succeed-info').fadeIn();
 	});
 });

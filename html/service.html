@@ -158,8 +158,8 @@
             <p>这是一行关于WTRnode 2r的介绍。这是一行关于WTRnode2r的介绍。这是一行关于WTRnode2r的介绍。这是一行关于WTRnode 2r的介绍。这是一行关于WTRnode 2r的介绍。</p>
           </div><!--/product-->
 
-          <!--右侧diy form-->
-          <form class="diy-form">
+          <!--右侧buy form-->
+          <form class="buy form">
             <p>
               <label for="number">数量：</label>
               <input type="radio" name="number" id="num1" value="50-100">
@@ -167,8 +167,7 @@
               <input type="radio" name="number" id="num3" value="500-3000">
               <input type="radio" name="number" id="num4" value="3000以上">
             </p>
-            <p class="hr">
-              <label></label>
+            <p class="hr clearfix">
               <span></span>
             </p>
             <p>
@@ -205,8 +204,67 @@
               <label>同意<a href="">用户订购协议</a></label>
             </p>
             <p class="actions">
-              <input type="submit" class="button primary" value="提交订单">
+              <input type="button" class="button primary" id="submit-mul-form" value="提交订单">
             </p>
+            <div class="succeed-info">
+              <p class="suc-title">订单已受理！</p>
+              <p>销售代表将在7个工作日内和您取得联系。</p>
+              <p class="actions">
+                <a href="" class="button primary sure">确定</a>
+              </p>
+            </div>
+          </form><!--buy form-->
+
+          <!--右侧diy form-->
+          <form class="diy form">
+            <p>
+              <label for="number">数量：</label>
+              <input type="radio" name="number" id="num5" value="500-3000">
+              <input type="radio" name="number" id="num6" value="3000以上">
+            </p>
+            <p>
+              <label for="name">姓名：</label>
+              <input type="text" name="name" id="name">
+            </p>
+            <p>
+              <label for="company">公司：</label>
+              <input type="text" name="company" id="company">
+            </p>
+            <p>
+              <label for="usage">用途：</label>
+              <textarea name="usage" id="usage">请用50-100字简单说明产品用途</textarea>
+            </p>
+            <p>
+              <label for="email">邮箱：</label>
+              <input type="email" name="email" id="email">
+            </p>
+            <p>
+              <label for="tel">手机号：</label>
+              <input type="tel" name="tel" id="tel">
+            </p>
+            <p>
+              <label for="code">图片验证码：</label>
+              <input type="text" name="code" id="code"><img src="../images/code.png"><a href="">看不清，换一张</a><br>
+              <input type="button" class="button dark getcode" value="免费获取验证码">
+            </p>
+            <p>
+              <label for="mscode">短信验证码：</label>
+              <input type="text" name="mscode" id="mscode"><br>
+            </p>
+            <p>
+              <input type="checkbox" checked="checked" name="agree-argu" id="agree-argu">
+              <label>同意<a href="">用户订购协议</a></label>
+            </p>
+            <p class="actions">
+              <input type="button" class="button primary" id="submit-mul-form" value="提交订单">
+            </p>
+            <div class="succeed-info">
+              <p class="suc-title">订单已受理！</p>
+              <p>销售代表将在7个工作日内和您取得联系。</p>
+              <p class="actions">
+                <a href="" class="button primary sure">确定</a>
+              </p>
+            </div>
           </form><!--diy form-->
         </div><!--/弹出层-->
       </div><!--/硬件-->
