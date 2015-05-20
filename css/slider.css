@@ -121,7 +121,16 @@
 }
 .da-dots span.da-dots-current{
 	border-bottom-color:#e6ae30;
+	-webkit-transform:rotate(15deg);
+	-moz-transform:rotate(15deg);
+	-o-transform:rotate(15deg);
+	-ms-transform:rotate(15deg);
 	transform:rotate(15deg);
+	-webkit-transform-origin:60% 80%;
+	-moz-transform-origin:60% 80%;
+	-o-transform-origin:60% 80%;
+	-trans-transform-origin:60% 80%;
+	-ms-transform-origin:60% 80%;
 	transform-origin:60% 80%;
 }
 .da-arrows{

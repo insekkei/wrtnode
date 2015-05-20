@@ -27,7 +27,7 @@ $(function() {
 			'right':'0'
 		});
 		if($this.attr('class').match('buy')=='buy'){
-			$('#prev-step').fadeOut();
+			$('#prev-step').fadeOut(0);
 			$('.form.buy').fadeIn();
 			$('.form.buy').siblings('form').fadeOut(0);
 		}
@@ -43,7 +43,7 @@ $(function() {
 		$('.overlay').animate({
 			'right':'-110%'
 		});
-		$('.succeed-info').fadeOut();
+		$('.succeed-info').fadeOut(0);
 		e.preventDefault();
 	});
 
