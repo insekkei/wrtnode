@@ -179,7 +179,7 @@ footer .has-border{
     top:-10px;
 }
 /*form*/
-form>p{margin:10px 0;}
+form>p,form>div{margin:10px 0;}
 form>p:first-child{margin-top:0;}
 form a{
     color:#fffefe;
@@ -212,7 +212,7 @@ input[type=radio]{
     height:2em;
     background:#5c5c5c;
     border:1px solid #5c5c5c;
-    vertical-align: top;
+    vertical-align: middle;
     cursor:pointer;
 }
 input[type=radio]:after{
@@ -230,6 +230,40 @@ input[type=radio]:checked:after{
     border:1px solid #e6ae30;
     color:#e6ae30;
 }
+input[type=radio][disabled=disabled]:after{
+    background:#4c4c4c;
+    border-style:dashed;
+    color:#b2b2b2;
+}
+.otheroption{
+    color:#b2b2b2;
+}
+input[type=radio][name=color]{
+    width:30px;
+    vertical-align: top;
+}
+input[type=radio][name=color]:after{
+    width:18px;
+    padding:9px 0;
+    border:3px solid #5c5c5c;
+}
+input[type=radio][name=color]:checked:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    z-index:9;
+    width:22px;
+    padding:11px 0;
+    border:1px solid #5c5c5c;
+    border-color:#e6ae30;
+}
+#color1:after{background:#fff}
+#color2:after{background:#000}
+#color3:after{background:#00a0e8}
+#color4:after{background:#91c720}
+#color5:after{background:#f19700}
+#color6:after{background:#e30014}
+
 input[type=checkbox]{position:relative;}
 input[type=checkbox]:after{
     content:"";
@@ -239,7 +273,7 @@ input[type=checkbox]:after{
     background:#5c5c5c;
 }
 input[type=checkbox]:checked:before{
-    content:"âˆš";
+    content:"√";
     position:absolute;
     color:#e6ae30;
     text-align:center;
@@ -253,7 +287,7 @@ label{
 }
 input[type=text],input[type=email],textarea,input[type=tel]{
     height:32px;
-    width:80%;
+    width:82.3%;
     background:#5c5c5c;
     color:#eee;
     border:0;
@@ -262,14 +296,37 @@ input[type=text],input[type=email],textarea,input[type=tel]{
 input[type=tel]{
     width:45%;
 }
+/*select*/
+.selectContainer{position:relative; width: 64%; padding: 0 15px;display:inline-block;background:#5c5c5c;vertical-align: middle;} 
+.selectContainer .selectOption{min-width: 100%; display: block;line-height:32px; height:32px; white-space:nowrap; overflow:hidden;border:none; z-index:1000} 
+.selectOption em{font-size:12px;}
+.selectContainer .shows{width: 32px; height:22px; position:absolute; right:0; top:5px;
+background:url(../images/xia.png) no-repeat center;background-size:55% auto;border-left:1px solid #e6ae30} 
+.selectContainer ul{box-sizing:border-box;position:absolute; width:100.5%; top:33px; left:-1px; display:none;border:1px solid #b2b2b2;border-top:0;} 
+.selectContainer.active{border:1px solid #b2b2b2;border-bottom-color:#656565;box-sizing:border-box;}
+.selectContainer ul li{padding: 0 15px; line-height: 32px; width: 100%; background: #5c5c5c; cursor:pointer} 
+.selectContainer ul li:hover{background:#4c4c4c} 
+.selectContainer ul li:hover:after{
+    content:"√";
+    display:inline-block;
+    color:#e6ae30;
+    margin-left:20px;
+}
+.selectContainer ul.dis{display:block!important;} 
+.selectContainer ul.undis{display:none !important;} 
+.zIndex{z-index:10000!important} 
+.selectContainer .gray{color:#DDD}
+
+/*select over*/
 .hr span{
     display:block;
     width:83%;
-    height:20px;
-    margin-bottom:20px;
+    height:10px;
+    margin-bottom:10px;
     float:right;
     border-bottom:1px solid #5c5c5c;
 }
+
 #code,#mscode{
     width:26%;
 }
@@ -292,7 +349,7 @@ textarea{
 /*overlay*/
 .overlay{
     position:fixed;
-    top:10px;
+    top:3px;
     right:-110%;
     background:#424242;
     color:#fffefe;
@@ -343,6 +400,9 @@ textarea{
     border-left:1px solid #898989;
     padding-left:50px;
     font-size:13px;
+}
+#prev-step{
+    display: none;
 }
 .succeed-info{
     position:absolute;

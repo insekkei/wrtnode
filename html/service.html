@@ -162,7 +162,7 @@
           <form class="buy form">
             <p>
               <label for="number">数量：</label>
-              <input type="radio" name="number" id="num1" value="50-100">
+              <input type="radio" name="number" id="num1" value="50-100"  checked="checked">
               <input type="radio" name="number" id="num2" value="100-500">
               <input type="radio" name="number" id="num3" value="500-3000">
               <input type="radio" name="number" id="num4" value="3000以上">
@@ -204,6 +204,7 @@
               <label>同意<a href="">用户订购协议</a></label>
             </p>
             <p class="actions">
+              <input type="button" class="button primary" id="prev-step" value="上一步">
               <input type="button" class="button primary" id="submit-mul-form" value="提交订单">
             </p>
             <div class="succeed-info">
@@ -219,52 +220,77 @@
           <form class="diy form">
             <p>
               <label for="number">数量：</label>
-              <input type="radio" name="number" id="num5" value="500-3000">
+              <input type="radio" name="number" id="num5" value="500-3000" checked="checked">
               <input type="radio" name="number" id="num6" value="3000以上">
             </p>
             <p>
-              <label for="name">姓名：</label>
-              <input type="text" name="name" id="name">
+              <label for="color">颜色：</label>
+              <input type="radio" name="color" id="color1" value=""  checked="checked">
+              <input type="radio" name="color" id="color2" value="">
+              <input type="radio" name="color" id="color3" value="">
+              <input type="radio" name="color" id="color4" value="">
+              <input type="radio" name="color" id="color5" value="">
+              <input type="radio" name="color" id="color6" value="">
+              <input type="radio" name="color" id="color7" value=""><span>其他颜色（请备注说明）</span>
             </p>
-            <p>
-              <label for="company">公司：</label>
-              <input type="text" name="company" id="company">
-            </p>
-            <p>
-              <label for="usage">用途：</label>
-              <textarea name="usage" id="usage">请用50-100字简单说明产品用途</textarea>
-            </p>
-            <p>
-              <label for="email">邮箱：</label>
-              <input type="email" name="email" id="email">
-            </p>
-            <p>
-              <label for="tel">手机号：</label>
-              <input type="tel" name="tel" id="tel">
-            </p>
-            <p>
-              <label for="code">图片验证码：</label>
-              <input type="text" name="code" id="code"><img src="../images/code.png"><a href="">看不清，换一张</a><br>
-              <input type="button" class="button dark getcode" value="免费获取验证码">
-            </p>
-            <p>
-              <label for="mscode">短信验证码：</label>
-              <input type="text" name="mscode" id="mscode"><br>
-            </p>
-            <p>
-              <input type="checkbox" checked="checked" name="agree-argu" id="agree-argu">
-              <label>同意<a href="">用户订购协议</a></label>
-            </p>
-            <p class="actions">
-              <input type="button" class="button primary" id="submit-mul-form" value="提交订单">
-            </p>
-            <div class="succeed-info">
-              <p class="suc-title">订单已受理！</p>
-              <p>销售代表将在7个工作日内和您取得联系。</p>
-              <p class="actions">
-                <a href="" class="button primary sure">确定</a>
-              </p>
+            <div>
+              <label for="size">尺寸：</label>
+              <div class="selectContainer" id="size" name="size"> 
+                  <span class="selectOption gray">45 mm x 50 mm</span> 
+                  <ul class="selectMenu"> 
+                      <li>55 mm x 50 mm</li> 
+                      <li>55 mm x 40 mm</li> 
+                      <li>50 mm x 40 mm</li> 
+                      <li class="otheroption">其它尺寸（请备注）</li> 
+                  </ul> 
+                  <span class="shows"></span> 
+              </div>
             </div>
+            <div>
+              <label for="interface">接口：</label>
+              <div class="selectContainer" id="interface" name="interface"> 
+                  <span class="selectOption gray">邮票孔<em>(针脚定义、数量及排布请备注说明)</em></span> 
+                  <ul class="selectMenu"> 
+                      <li>miniPCI</li>
+                      <li>m.2</li> 
+                      <li>邮票孔<em>(针脚定义、数量及排布请备注说明)</em></li> 
+                  </ul> 
+                  <span class="shows"></span> 
+              </div>
+            </div>
+            <div>
+              <label for="tx-method">天线方式：</label>
+              <div class="selectContainer" id="tx-method" name="tx-method"> 
+                  <span class="selectOption gray">外接天线</span> 
+                  <ul class="selectMenu"> 
+                      <li>外接天线</li> 
+                      <li>板载天线</li> 
+                      <li>陶瓷天线</li>
+                  </ul> 
+                  <span class="shows"></span> 
+              </div>
+            </div>
+            <p>
+              <label for="ram">内存大小：</label>
+              <input type="radio" name="ram" id="ram1" value="512Mbit"  checked="checked">
+              <input type="radio" name="ram" id="ram2" value="1024Mbit">
+              <input type="radio" name="ram" id="ram3" value="2048Mbit" disabled="disabled">
+            </p>
+            <p>
+              <label for="flash-size">Flash大小：</label>
+              <input type="radio" name="flash-size" id="flash-size1" value="512Mbit"  checked="checked">
+              <input type="radio" name="flash-size" id="flash-size2" value="1024Mbit">
+              <input type="radio" name="flash-size" id="flash-size3" value="2048Mbit" disabled="disabled">
+            </p>
+            <p>
+              <label for="notes">备注：</label>
+              <textarea name="notes" id="notes">请用50-100字简单说明产品用途</textarea>
+            </p>
+           
+            <p class="actions">
+              <input type="button" class="button primary" id="next-step" value="下一步">
+            </p>
+            
           </form><!--diy form-->
         </div><!--/弹出层-->
       </div><!--/硬件-->
