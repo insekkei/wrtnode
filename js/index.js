@@ -93,14 +93,14 @@ $(function() {
     } 
     $(".selectContainer").select();  
 
-    //if display the left-aside
+    //if display the aside menu
     $(window).scroll(function(){
     	var winHeight = $(window).height()-50;  
     	var toTop = $(document).scrollTop();
     	if(toTop > winHeight){
-    		$('.left-aside').fadeIn();
+    		$('aside').fadeIn();
     	}else{
-    		$('.left-aside').fadeOut();
+    		$('aside').fadeOut();
     	}
 
     	var pro1 = $('#product1').offset().top,
@@ -108,6 +108,7 @@ $(function() {
     		pro3 = $('#product3').offset().top,
     		pro4 = $('#product4').offset().top;
 
+    	//deside witch is the current link
     	if(toTop < pro1){
     		$('.left-aside li').eq(0).addClass("cur-panel").siblings().removeClass("cur-panel");
     		location.hash = '#index';

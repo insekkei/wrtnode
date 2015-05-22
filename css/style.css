@@ -537,10 +537,12 @@ textarea{
 aside{
     position:fixed;
     top:50px;
-    left:1%;
     width:auto;
-    text-align:right;
     display: none
+}
+.left-aside{
+    left:1%;
+    text-align:right;
 }
 aside a{
     color:#424242;
@@ -584,4 +586,22 @@ aside li.cur-panel:after{
     -trans-transform-origin:60% 80%;
     -ms-transform-origin:60% 80%;
     transform-origin:60% 80%;
+}
+.right-aside{
+    text-align:left;
+    right:1%;
+}
+.right-aside .button{
+    font-size:1.2em;
+}
+.right-aside div a{
+    color:#f1b657;
+    text-decoration:underline;
+}
+.right-aside div p{
+    margin-top:18px;
+}
+.right-aside div{
+    padding:0 10px;
+    font-size:15px;
 }
