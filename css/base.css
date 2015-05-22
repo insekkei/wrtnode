@@ -24,6 +24,7 @@ fieldset, img {
 :focus {
     outline: 0;
 }
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;} 
 address, caption, cite, code, dfn,
 em, strong, th, var, optgroup {
     font-style: normal;

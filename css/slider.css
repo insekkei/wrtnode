@@ -156,6 +156,7 @@
 	-ms-transition: opacity 0.4s ease-in-out 0.2s;
 	transition: opacity 0.4s ease-in-out 0.2s;
 }
+
 .da-slider:hover .da-arrows span,.hard-slide:hover button{
 	opacity: 1;
 }
