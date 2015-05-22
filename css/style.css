@@ -302,7 +302,7 @@ label{
 }
 input[type="text"],input[type="email"],textarea,input[type="tel"]{
     height:32px;
-    width:82.3%;
+    width:82%;
     background:#5c5c5c;
     color:#eee;
     border:0;
