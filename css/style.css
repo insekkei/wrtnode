@@ -4,8 +4,10 @@ header{
 nav{
     float:right;
 }
-h1 a{
+h1{
     float:left;
+}
+h1 a{
     display:inline-block;
     width:214px;
     height:49px;
@@ -14,6 +16,29 @@ h1 a{
 }
 h1 a span{
     display:none;
+}
+.header-nav{
+    float: left;
+    margin-top:40px;
+}
+.header-nav:before{
+    content:"";
+    position: relative;
+    top: -10px;
+    left:-14px;
+    float:left;
+    width: 0;
+    height: 0;
+    border:12px solid transparent;
+    border-left-width:8px;
+    border-right-width:8px;
+    border-bottom-color:#221816;
+    margin: 3px;
+    -webkit-transform:rotate(17deg);
+    -moz-transform:rotate(17deg);
+    -o-transform:rotate(17deg);
+    -ms-transform:rotate(17deg);
+    transform:rotate(17deg);
 }
 nav{
     margin:30px 40px;
@@ -90,6 +115,10 @@ span.blank{
     display:inline-block;
     width:40px;
 }
+span.blank2{
+    display: inline-block;
+    width: 10px;
+}
 span.blankln{
     display:block;
     margin:1em 0;
@@ -156,31 +185,82 @@ footer .has-border{
     border-right:1px solid #626262;
     width:33%;
 }
-/*service.html*/
-.service-caption{
+/*caption*/
+.caption{
     padding:90px 0;
 }
-.service-caption img{
+.caption img{
    float:left;
    width:40%;   
    margin-left:5%;
 }
-.service-caption h2,.service-caption p{
+.caption.reverse img{
+    float:right;
+    margin-right: 10%;
+    margin-left:0;
+    margin-top: 50px;
+}
+.caption h2,.caption p{
     width:40%;
     float:right;
     margin-right:10%;
 }
-.service-caption h2{
+.caption.reverse h2,.caption.reverse p{
+    float:left;
+    margin-left: 10%;
+    width: 35%;
+    margin-right:0;
+    text-align:right;
+}
+.caption h2{
     color: #424242;
     font-size: 25px;
     white-space: nowrap;
     font-weight: 700;
     margin-bottom:30px;
 }
-.service-caption h2 span{
+.caption h2 span{
     display:block;
     color:#e6ae30;
 }
+.caption.center{
+    text-align:center;
+}
+.caption.center>div{
+    width:50%;
+    float:left;
+}
+.caption.center p{
+    float: none;
+    margin-left:0;
+    width: 80%;
+    font-size:13px;
+    line-height:1.7em;
+}
+.caption.center h3{
+    width:80%;
+    font-size:21px;
+    margin:40px 0 20px;
+}
+.caption.center .images{
+    margin-top:120px;
+}
+.caption.center h3 span{
+    display:inline-block;
+    background:#000;
+    color:#fff;
+    padding:0 10px;
+    margin-left:8px;
+}
+.caption.center img{
+    width:30%;
+    margin: 3% 4%;
+    border-radius:50%;
+}
+.caption.center img:nth-child(2n-1){
+    margin-left: 22%;
+}
+/*list*/
 .hard-list{
     margin-bottom:10px;
 }
@@ -452,4 +532,56 @@ textarea{
 .succeed-info .sure{
     line-height:1em;
     padding:8px 50px;
+}
+/*aside*/
+aside{
+    position:fixed;
+    top:50px;
+    left:1%;
+    width:auto;
+    text-align:right;
+    display: none
+}
+aside a{
+    color:#424242;
+    font-size:13px;
+}
+aside li{
+    position:relative;
+    line-height:1.5em;
+}
+aside li:after{
+    content:"";
+    position:absolute;
+    left:110%;
+    top:-3px;
+    width: 0;
+    height: 0;
+    border:10px solid transparent;
+    border-left-width:6px;
+    border-right-width:6px;
+    border-bottom-color:#221816;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -trans-transition:all .2s linear;
+    -ms-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+}
+aside li.cur-panel a{
+    color:#b2b2b2;
+}
+aside li.cur-panel:after{
+    border-bottom-color:#e6ae30;
+    -webkit-transform:rotate(-17deg);
+    -moz-transform:rotate(-17deg);
+    -o-transform:rotate(-17deg);
+    -ms-transform:rotate(-17deg);
+    transform:rotate(-17deg);
+    -webkit-transform-origin:60% 80%;
+    -moz-transform-origin:60% 80%;
+    -o-transform-origin:60% 80%;
+    -trans-transform-origin:60% 80%;
+    -ms-transform-origin:60% 80%;
+    transform-origin:60% 80%;
 }
