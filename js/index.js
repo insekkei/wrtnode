@@ -11,13 +11,13 @@ $(function() {
   		slidesToScroll: 4
 	});
 
-	$('.has-menu').click(function(e){
-		$this = $(this);
-		$(this).children('ul').toggleClass('active');
-	});
-	$('.has-ul').hover(function(e){
+	$('.has-menu,.has-ul').mouseenter(function(e){
 		$this = $(this);
 		$(this).children('ul').addClass('active');
+	});
+	$('.has-menu').mouseleave(function(e){
+		$this = $(this);
+		$('.has-menu,.has-ul').children('ul').removeClass('active');
 	});
 
 	//购买和定制
