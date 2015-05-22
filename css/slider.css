@@ -140,10 +140,10 @@
 .da-arrows span,.hard-slide button{
 	position: absolute;
 	top: 50%;
-	height: 30px;
 	width: 40px;
 	color:#272636;
 	font-size:40px;
+	line-height: 80px;
 	cursor: pointer;
 	z-index: 2000;
 	opacity: 0;
