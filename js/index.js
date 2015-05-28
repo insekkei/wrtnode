@@ -111,19 +111,14 @@ $(function() {
     	//deside witch is the current link
     	if(toTop < pro1){
     		$('.left-aside li').eq(0).addClass("cur-panel").siblings().removeClass("cur-panel");
-    		location.hash = '#index';
     	}else if(toTop < pro2){
     		$('.left-aside li').eq(1).addClass("cur-panel").siblings().removeClass("cur-panel");
-    		location.hash = '#product1';
     	}else if(toTop < pro3){
     		$('.left-aside li').eq(2).addClass("cur-panel").siblings().removeClass("cur-panel");
-    		location.hash = '#product2';
     	}else if(toTop < pro4){
     		$('.left-aside li').eq(3).addClass("cur-panel").siblings().removeClass("cur-panel");
-    		location.hash = '#product3';
     	}else{
     		$('.left-aside li').eq(4).addClass("cur-panel").siblings().removeClass("cur-panel");
-    		location.hash = '#product4';
     	}
     	
     });
@@ -133,10 +128,6 @@ $(function() {
 
 		var href = $(this).attr("href");
 		var pos = $(href).offset().top;
-
-   		$(this).parent('li')
-      		.addClass("cur-panel")
-      		.siblings().removeClass("cur-panel");
 
     	$("html,body").animate({scrollTop: pos}, 1000,function(){
 			location.hash = href;
