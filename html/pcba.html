@@ -178,12 +178,12 @@
 
           <!--右侧buy form-->
           <form class="buy form">
-            <p>
+            <p id="diy-hidden">
               <label for="number">数量：</label>
-              <input type="radio" name="number" id="num1" value=""  checked="checked"><label for="num1">50-100</label>
-              <input type="radio" name="number" id="num2" value=""><label for="num2">50-100</label>
-              <input type="radio" name="number" id="num3" value=""><label for="num3">50-100</label>
-              <input type="radio" name="number" id="num4" value=""><label for="num4">50-100</label>
+              <input type="radio" name="number" id="num1" value="1"  checked="checked"><label for="num1">50-100</label>
+              <input type="radio" name="number" id="num2" value="2"><label for="num2">50-100</label>
+              <input type="radio" name="number" id="num3" value="3"><label for="num3">50-100</label>
+              <input type="radio" name="number" id="num4" value="4"><label for="num4">50-100</label>
             </p>
             <p class="hr clearfix">
               <span></span>
@@ -238,19 +238,19 @@
           <!--右侧diy form-->
           <form class="diy form">
             <p>
-              <label for="number">数量：</label>
-              <input type="radio" name="number" id="num5" value="" checked="checked"><label for="num5">500-3000</label>
-              <input type="radio" name="number" id="num6" value=""><label for="num6">3000以上</label>
+              <label for="num">数量：</label>
+              <input type="radio" name="num" id="num5" value="0" checked="checked"><label for="num5">500-3000</label>
+              <input type="radio" name="num" id="num6" value="1"><label for="num6">3000以上</label>
             </p>
             <p>
               <label for="color">颜色：</label>
-              <input type="radio" name="color" id="color1" value=""  checked="checked"><label for="color1"></label>
-              <input type="radio" name="color" id="color2" value=""><label for="color2"></label>
-              <input type="radio" name="color" id="color3" value=""><label for="color3"></label>
-              <input type="radio" name="color" id="color4" value=""><label for="color4"></label>
-              <input type="radio" name="color" id="color5" value=""><label for="color5"></label>
-              <input type="radio" name="color" id="color6" value=""><label for="color6"></label>
-              <input type="radio" name="color" id="color7" value=""><label for="color7"></label><span class="m10">其他颜色（请备注说明）</span>
+              <input type="radio" name="color" id="color1" value="1"  checked="checked"><label for="color1"></label>
+              <input type="radio" name="color" id="color2" value="2"><label for="color2"></label>
+              <input type="radio" name="color" id="color3" value="3"><label for="color3"></label>
+              <input type="radio" name="color" id="color4" value="4"><label for="color4"></label>
+              <input type="radio" name="color" id="color5" value="5"><label for="color5"></label>
+              <input type="radio" name="color" id="color6" value="6"><label for="color6"></label>
+              <input type="radio" name="color" id="color7" value="7"><label for="color7"></label><span class="m10">其他颜色（请备注说明）</span>
             </p>
             <div>
               <label for="size">尺寸：</label>
@@ -278,8 +278,8 @@
               </div>
             </div>
             <div>
-              <label for="tx-method">天线方式：</label>
-              <div class="selectContainer" id="tx-method" name="tx-method"> 
+              <label for="ant">天线方式：</label>
+              <div class="selectContainer" id="ant" name="ant"> 
                   <span class="selectOption gray">外接天线</span> 
                   <ul class="selectMenu"> 
                       <li>外接天线</li> 
@@ -291,19 +291,19 @@
             </div>
             <p>
               <label for="ram">内存大小：</label>
-              <input type="radio" name="ram" id="ram1" value=""  checked="checked"><label for="ram1">512Mbit</label>
-              <input type="radio" name="ram" id="ram2" value=""><label for="ram2">1024Mbit</label>
-              <input type="radio" name="ram" id="ram3" value="" disabled="disabled"><label for="ram3">2048Mbit</label>
+              <input type="radio" name="ram" id="ram1" value="1"  checked="checked"><label for="ram1">512Mbit</label>
+              <input type="radio" name="ram" id="ram2" value="2"><label for="ram2">1024Mbit</label>
+              <input type="radio" name="ram" id="ram3" value="3" disabled="disabled"><label for="ram3">2048Mbit</label>
             </p>
             <p>
-              <label for="flash-size">Flash大小：</label>
-              <input type="radio" name="flash-size" id="flash-size1" value=""  checked="checked"><label for="flash-size1">512Mbit</label>
-              <input type="radio" name="flash-size" id="flash-size2" value=""><label for="flash-size2">1024Mbit</label>
-              <input type="radio" name="flash-size" id="flash-size3" value="" disabled="disabled"><label for="flash-size3">2048Mbit</label>
+              <label for="flash">Flash大小：</label>
+              <input type="radio" name="flash" id="flash-size1" value="1"  checked="checked"><label for="flash-size1">512Mbit</label>
+              <input type="radio" name="flash" id="flash-size2" value="2"><label for="flash-size2">1024Mbit</label>
+              <input type="radio" name="flash" id="flash-size3" value="3" disabled="disabled"><label for="flash-size3">2048Mbit</label>
             </p>
             <p>
-              <label for="notes">备注：</label>
-              <textarea name="notes" id="notes">请用50-100字简单说明产品用途</textarea>
+              <label for="note">备注：</label>
+              <textarea name="note" id="note">请用50-100字简单说明产品用途</textarea>
             </p>
            
             <p class="actions">
