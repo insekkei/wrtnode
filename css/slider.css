@@ -1,7 +1,7 @@
 .da-slider{
 	width: 100%;
 	min-width: 520px;
-	height: 450px;
+	height: 600px;
 	position: relative;
 	margin: 30px auto;
 	overflow: hidden;
@@ -61,7 +61,7 @@
 	color:#e6ae30;
 }
 .da-slide p{
-	width: 36%;
+	width: 40%;
 	top: 155px;
 	color: #424242;
 	font-size: 15px;

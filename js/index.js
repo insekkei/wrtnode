@@ -11,6 +11,50 @@ $(function() {
   		slidesToScroll: 4
 	});
 
+	var $note = $('#note'),
+	 initHtml = '请用50-100字简单说明产品用途';
+
+	initTextarea2();
+
+	$note.focus(function(){
+		initTextarea();
+	}).keydown(function(){
+		initTextarea2();
+	}).blur(function(){
+		initTextarea3();
+	})
+
+	function initTextarea(){
+		if ($note.val().length == 0 || $note.val() == initHtml) {
+			$note.val(initHtml).addClass('blank');
+			$('#next-step').removeClass('primary').addClass('disabled').attr('disabled','disabled');
+			$note.addClass('blank').val('');
+		}else{
+			$note.removeClass('blank');
+			$('#next-step').addClass('primary').removeClass('disabled').removeAttr('disabled');
+		}
+	}
+
+	function initTextarea2(){
+		if ($note.val().length > 0 && $note.val() != initHtml) {
+			$note.removeClass('blank');
+			$('#next-step').addClass('primary').removeClass('disabled').removeAttr('disabled');
+		}else{
+			$note.addClass('blank');
+			$('#next-step').removeClass('primary').addClass('disabled').attr('disabled','disabled');
+		}
+	}
+
+	function initTextarea3(){
+		if ($note.val().length > 0 && $note.val() != initHtml) {
+			$note.removeClass('blank');
+			$('#next-step').addClass('primary').removeClass('disabled').removeAttr('disabled');
+		}else{
+			$('#next-step').removeClass('primary').addClass('disabled').attr('disabled','disabled');
+			$note.addClass('blank').val(initHtml);
+		}
+	}
+
 	$('.has-menu,.has-ul').mouseenter(function(e){
 		$this = $(this);
 		$(this).children('ul').addClass('active');
@@ -39,6 +83,30 @@ $(function() {
 		e.preventDefault();
 	});
 
+	checkSubmit();
+	$('.buy.form input').keydown(function(){
+		checkSubmit()
+	}).blur(function(){
+		checkSubmit()
+	});
+	function checkSubmit(){
+		var name = $('#name').val(),
+			company = $('#company').val(),
+			email = $('#email').val(),
+			tel = $('#tel').val(),
+			code = $('#code').val(),
+			mscode = $('#mscode').val(),
+			agree = $('#agree-argu').is(':checked');
+
+		if (name.length == 0 || company.length == 0 || email.length == 0 || 
+			tel.length == 0 || code.length == 0 || mscode.length == 0 || 
+			agree == 'false') {
+			$('#submit-mul-form').removeClass('primary').addClass('disabled').attr('disabled','disabled');
+		}else{
+			$('#submit-mul-form').addClass('primary').removeClass('disabled').removeAttr('disabled');
+		}
+	}
+
 	$('.close,.sure').click(function(e){
 		$('.overlay').animate({
 			'right':'-110%'
@@ -61,6 +129,7 @@ $(function() {
 		$('.form.diy').fadeIn();
 		$('.form.diy').siblings('form').fadeOut(0);
 	});
+
 	//select
 	jQuery.fn.select = function(options){ 
         return this.each(function(){ 

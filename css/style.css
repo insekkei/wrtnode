@@ -293,6 +293,12 @@ form a{
     background:#e6ae30;
     color:#fffefe;
 }
+.button.disabled{
+    background: #5c5c5c;
+    border-color:#5c5c5c;
+    color:#000;
+    cursor: not-allowed;
+}
 .button.dark{
     background:#826a35;
     color:#fffefe;
@@ -397,6 +403,9 @@ input[type="text"],input[type="email"],textarea,input[type="tel"]{
     color:#eee;
     border:0;
     padding:8px 10px;
+}
+textarea.blank{
+    color:#b2b2b2;
 }
 input[type="tel"]{
     width:45%;
@@ -552,7 +561,10 @@ aside li{
     position:relative;
     line-height:1.5em;
 }
-aside li:after{
+aside li.cur-panel a{
+    color:#b2b2b2;
+}
+aside li a:after{
     content:"";
     position:absolute;
     left:110%;
@@ -570,10 +582,7 @@ aside li:after{
     -o-transition:all .2s linear;
     transition:all .2s linear;
 }
-aside li.cur-panel a{
-    color:#b2b2b2;
-}
-aside li.cur-panel:after{
+aside li.cur-panel a:after{
     border-bottom-color:#e6ae30;
     -webkit-transform:rotate(-17deg);
     -moz-transform:rotate(-17deg);
