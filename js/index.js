@@ -14,7 +14,10 @@ $(function() {
 	var $note = $('#note'),
 	 initHtml = '请用50-100字简单说明产品用途';
 
-	initTextarea2();
+	 if ($note.length>0) {
+	 	initTextarea2();
+	 };
+	
 
 	$note.focus(function(){
 		initTextarea();
@@ -83,8 +86,12 @@ $(function() {
 		e.preventDefault();
 	});
 
-	checkSubmit();
-	$('.buy.form input').keydown(function(){
+	var $input = $('.buy.form input');
+	if ($input.length>0) {
+		checkSubmit()
+	};
+	
+	$input.keydown(function(){
 		checkSubmit()
 	}).blur(function(){
 		checkSubmit()
