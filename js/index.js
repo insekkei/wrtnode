@@ -6,11 +6,13 @@ $(function() {
 	$slider.cslider();
 
 	// initialize the slick
-	$('.hard-slide').slick({
-	    slidesToShow: 4,
-  		slidesToScroll: 4
-	});
-
+	if ($('.hard-slide').length) {
+		$('.hard-slide').slick({
+		    slidesToShow: 4,
+	  		slidesToScroll: 4
+		});
+	};
+	
 	var $note = $('#note'),
 	 initHtml = '请用50-100字简单说明产品用途';
 
@@ -58,17 +60,18 @@ $(function() {
 		}
 	}
 
-	$('.has-menu,.has-ul').mouseenter(function(e){
+	$(document).on('mouseenter','.has-menu,.has-ul',function(e){
 		$this = $(this);
 		$(this).children('ul').addClass('active');
 	});
-	$('.has-menu').mouseleave(function(e){
+
+	$(document).on('mouseleave','.has-menu',function(e){
 		$this = $(this);
 		$('.has-menu,.has-ul').children('ul').removeClass('active');
 	});
 
 	//购买和定制
-	$('.hard-list .actions .button').click(function(e){		
+	$(document).on('click','.hard-list .actions .button',function(e){
 		$this = $(this);
 		$('.overlay').animate({
 			'right':'0'
@@ -87,6 +90,7 @@ $(function() {
 	});
 
 	var $input = $('.buy.form input');
+
 	if ($input.length>0) {
 		checkSubmit()
 	};
@@ -96,6 +100,7 @@ $(function() {
 	}).blur(function(){
 		checkSubmit()
 	});
+
 	function checkSubmit(){
 		var name = $('#name').val(),
 			company = $('#company').val(),
@@ -114,7 +119,7 @@ $(function() {
 		}
 	}
 
-	$('.close,.sure').click(function(e){
+	$(document).on('click','.close,.sure',function(e){
 		$('.overlay').animate({
 			'right':'-110%'
 		});
@@ -122,17 +127,17 @@ $(function() {
 		e.preventDefault();
 	});
 
-	$('#submit-mul-form').click(function(e){
+	$(document).on('click','#submit-mul-form',function(e){
 		$('.succeed-info').fadeIn();
 	});
 
-	$('#next-step').click(function(e){
+	$(document).on('click','#next-step',function(e){
 		$('.form.buy').fadeIn();
 		$('#prev-step').fadeIn();
 		$('.form.buy').siblings('form').fadeOut(0);
 	});
 
-	$('#prev-step').click(function(e){
+	$(document).on('click','#prev-step',function(e){
 		$('.form.diy').fadeIn();
 		$('.form.diy').siblings('form').fadeOut(0);
 	});
@@ -167,40 +172,45 @@ $(function() {
         }); 
            
     } 
-    $(".selectContainer").select();  
+
+    var $sc = $('.selectContainer');
+    if ($sc.length) $sc.select();
 
     //if display the aside menu
-    $(window).scroll(function(){
-    	var winHeight = $(window).height()-50;  
-    	var toTop = $(document).scrollTop();
-    	if(toTop > winHeight){
-    		$('aside').fadeIn();
-    	}else{
-    		$('aside').fadeOut();
-    	}
+    if($('.left-aside').length){
+	    $(window).scroll(function(){
+	    	var winHeight = $(window).height()-50;  
+	    	var toTop = $(document).scrollTop();
+	    	if(toTop > winHeight){
+	    		$('aside').fadeIn();
+	    	}else{
+	    		$('aside').fadeOut();
+	    	}
 
-    	var pro1 = $('#product1').offset().top,
-    		pro2 = $('#product2').offset().top,
-    		pro3 = $('#product3').offset().top,
-    		pro4 = $('#product4').offset().top;
+	    	var pro1 = $('#product1').offset().top,
+	    		pro2 = $('#product2').offset().top,
+	    		pro3 = $('#product3').offset().top,
+	    		pro4 = $('#product4').offset().top;
 
-    	//deside witch is the current link
-    	if(toTop < pro1){
-    		$('.left-aside li').eq(0).addClass("cur-panel").siblings().removeClass("cur-panel");
-    	}else if(toTop < pro2){
-    		$('.left-aside li').eq(1).addClass("cur-panel").siblings().removeClass("cur-panel");
-    	}else if(toTop < pro3){
-    		$('.left-aside li').eq(2).addClass("cur-panel").siblings().removeClass("cur-panel");
-    	}else if(toTop < pro4){
-    		$('.left-aside li').eq(3).addClass("cur-panel").siblings().removeClass("cur-panel");
-    	}else{
-    		$('.left-aside li').eq(4).addClass("cur-panel").siblings().removeClass("cur-panel");
-    	}
-    	
-    });
+	    	//deside witch is the current link
+	    	if(toTop < pro1){
+	    		$('.left-aside li').eq(0).addClass("cur-panel").siblings().removeClass("cur-panel");
+	    	}else if(toTop < pro2){
+	    		$('.left-aside li').eq(1).addClass("cur-panel").siblings().removeClass("cur-panel");
+	    	}else if(toTop < pro3){
+	    		$('.left-aside li').eq(2).addClass("cur-panel").siblings().removeClass("cur-panel");
+	    	}else if(toTop < pro4){
+	    		$('.left-aside li').eq(3).addClass("cur-panel").siblings().removeClass("cur-panel");
+	    	}else{
+	    		$('.left-aside li').eq(4).addClass("cur-panel").siblings().removeClass("cur-panel");
+	    	}
+	    	
+	    });
+	}
 
     //aside
-    $('.left-aside a').click(function(e){
+    $(document).on('click','.left-aside a',function(e){
+    //$('.left-aside a').click(function(e){
 
 		var href = $(this).attr("href");
 		var pos = $(href).offset().top;

@@ -185,6 +185,13 @@ footer .has-border{
     border-right:1px solid #626262;
     width:33%;
 }
+.copyright{
+    background: #333;
+    color: #aaa;
+    padding:.7em 0;
+    text-align: center;
+    font-size: 12px;
+}
 /*caption*/
 .caption{
     padding:90px 0;

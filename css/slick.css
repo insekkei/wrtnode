@@ -109,6 +109,8 @@
     padding-bottom:40px;
     font-size: 13px;
     color:#4c4c4c;
+    height: 126px;
+    overflow: hidden;
 }
 [dir='rtl'] .slick-slide
 {
