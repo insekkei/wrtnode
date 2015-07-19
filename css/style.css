@@ -621,3 +621,14 @@ aside li.cur-panel a:after{
     padding:0 10px;
     font-size:15px;
 }
+.incoming{
+    font-size: 64px;
+    padding-left: 294px;
+    line-height: 500px;
+    color: #222;
+    font-style:italic;
+}
+.incoming span{
+    color: #e6ae30;
+    padding:0;
+}

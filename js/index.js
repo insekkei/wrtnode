@@ -8,8 +8,9 @@ $(function() {
 	// initialize the slick
 	if ($('.hard-slide').length) {
 		$('.hard-slide').slick({
-		    slidesToShow: 4,
-	  		slidesToScroll: 4
+		    slidesToShow: 3,
+		    centerMode: true,
+	  		slidesToScroll: 3
 		});
 	};
 	
@@ -67,7 +68,12 @@ $(function() {
 
 	$(document).on('mouseleave','.has-menu',function(e){
 		$this = $(this);
-		$('.has-menu,.has-ul').children('ul').removeClass('active');
+		$('.has-menu').children('ul').removeClass('active');
+	});
+
+	$(document).on('mouseleave','.has-ul',function(e){
+		$this = $(this);
+		$('.has-ul').children('ul').removeClass('active');
 	});
 
 	//购买和定制
