@@ -8,9 +8,8 @@ $(function() {
 	// initialize the slick
 	if ($('.hard-slide').length) {
 		$('.hard-slide').slick({
-		    slidesToShow: 3,
-		    centerMode: true,
-	  		slidesToScroll: 3
+		    slidesToShow: 4,
+	  		slidesToScroll: 4
 		});
 	};
 	
