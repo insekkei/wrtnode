@@ -151,32 +151,79 @@ $(function() {
 	jQuery.fn.select = function(options){ 
         return this.each(function(){ 
             var $this = $(this); 
-            var $shows = $this.find(".shows"); 
-            var $selectOption = $this.find(".selectOption"); 
-            var $el = $this.find("ul > li"); 
+            var $shows = $this.find('.shows'); 
+            var $selectOption = $this.find('.selectOption'); 
+            var $el = $this.find('ul > li'); 
                                        
             $this.click(function(e){ 
-                $(this).toggleClass("zIndex active"); 
-                $(this).children("ul").toggleClass("dis"); 
+                $(this).toggleClass('zIndex active'); 
+                $(this).children('ul').toggleClass('dis'); 
                 e.stopPropagation(); 
             }); 
                
-            $el.bind("click",function(){ 
-                var $this_ = $(this); 
+            $el.bind('click',function(){ 
+                var $this_ = $(this);
+                var thisText = $this_.text();
+                var radioInputArray = new Array();
                     
-                $this.find("span").removeClass("gray"); 
-                $this_.parent().parent().find(".selectOption").text($this_.text()); 
+                $this.find('span').removeClass('gray'); 
+                $this_.parent().parent().find('.selectOption').text(thisText); 
+                switch(thisText){
+					case 'MT7620N':
+					  radioInputArray.push('flash-size3','ram2','ram3','ram4');
+					  disableRadioInput(radioInputArray);
+					  break;
+					case 'MT7628AN':
+					  radioInputArray.push('ram4');
+					  disableRadioInput(radioInputArray);
+					  break;
+					case 'MT7688AN':
+					  radioInputArray.push('ram4');
+					  disableRadioInput(radioInputArray);
+					  break;
+					case 'Hi3516A':
+					  radioInputArray.push('');
+					  disableRadioInput(radioInputArray);
+					  break;
+					case 'Hi3518E':
+					  radioInputArray.push('ram1','ram2','ram3','ram4');
+					  disableRadioInput(radioInputArray);
+					  break;
+					case 'QCA9531':
+					  radioInputArray.push('flash-size3','ram4');
+					  disableRadioInput(radioInputArray);
+					  break;
+					default:
+					  radioInputArray.push('');
+					  disableRadioInput(radioInputArray);
+				}
             }); 
                
-            $("body").bind("click",function(){ 
-                $this.removeClass("zIndex"); 
-                $this.find("ul").removeClass("dis");     
-            }) 
-               
+            $('body').bind('click',function(){ 
+                $this.removeClass('zIndex'); 
+                $this.find('ul').removeClass('dis');   	  
+            });
         //eahc End   
         }); 
            
-    } 
+    }
+
+    var disableRadioInput = function(radioInputArray){
+    	
+    	var radioInputs = $('input[name="ram"], input[name="flash"]');
+
+    	for (i in radioInputs) {
+    		radioInputs.eq(i).attr('disabled', false);
+    	};
+
+    	for (i in radioInputArray) {
+    		radioInputs.each(function(e){
+    			if (radioInputArray[i] === $(this).attr('id')) {
+    				$(this).attr('disabled', true);
+    			}
+    		});
+    	};
+    };
 
     var $sc = $('.selectContainer');
     if ($sc.length) $sc.select();
