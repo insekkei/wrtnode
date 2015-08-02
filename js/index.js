@@ -230,9 +230,9 @@ $(function() {
 	    	var winHeight = $(window).height()-50;  
 	    	var toTop = $(document).scrollTop();
 	    	if(toTop > winHeight){
-	    		$('aside').fadeIn();
+	    		$('.left-aside').fadeIn();
 	    	}else{
-	    		$('aside').fadeOut();
+	    		$('.left-aside').fadeOut();
 	    	}
 
 	    	var pro1 = $('#product1').offset().top,

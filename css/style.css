@@ -606,8 +606,13 @@ aside li.cur-panel a:after{
 .right-aside{
     text-align:left;
     right:1%;
+    padding: 1em;
+    border: 1px solid #000;
+    background: #EEEEEE;
+    display: inline-block;
 }
 .right-aside .button{
+    margin:.5em 0;
     font-size:1.2em;
 }
 .right-aside div a{
