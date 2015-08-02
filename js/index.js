@@ -20,7 +20,6 @@ $(function() {
 	 	initTextarea2();
 	 };
 	
-
 	$note.focus(function(){
 		initTextarea();
 	}).keydown(function(){
@@ -193,9 +192,6 @@ $(function() {
 					  radioInputArray.push('flash-size3','ram4');
 					  disableRadioInput(radioInputArray);
 					  break;
-					default:
-					  radioInputArray.push('');
-					  disableRadioInput(radioInputArray);
 				}
             }); 
                

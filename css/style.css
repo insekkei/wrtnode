@@ -668,6 +668,7 @@ aside li.cur-panel a:after{
 .diy-form input[type="email"],
 .diy-form textarea,
 .diy-form input[type="tel"]{
+    width:64%;
     background:#fff;
     color:#4c4c4c;
     border:1px solid #ccc;
