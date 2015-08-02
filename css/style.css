@@ -325,7 +325,7 @@ input[type="radio"]{
 }
 input[type="radio"]+label{
     display:inline-block;
-    width:60px;
+    width:70px;
     position:relative;
     color:#eee;
     background:#5c5c5c;
@@ -632,3 +632,61 @@ aside li.cur-panel a:after{
     color: #e6ae30;
     padding:0;
 }
+/* diy-form */
+.diy-form{
+    width:960px;
+    margin:70px auto;
+}
+.diy-form h2{
+    border-bottom:1px solid #000;
+    padding:5px 0;
+    margin:40px 0;
+}
+.diy-form h2:before{
+    content:"";
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background:#000;
+    margin-right:10px;
+}
+.diy-form .link{
+    color:#5C5C5C;
+}
+.diy-form .selectContainer{
+    background:#fff;
+    color:#4C4C4C;
+    border:1px solid #ccc;
+}
+.diy-form .selectContainer .gray{
+    color:#4C4C4C;
+}
+.diy-form .selectContainer ul li{
+    background:#fff;
+}
+.diy-form input[type="text"],
+.diy-form input[type="email"],
+.diy-form textarea,
+.diy-form input[type="tel"]{
+    background:#fff;
+    color:#4c4c4c;
+    border:1px solid #ccc;
+}
+.diy-form input[type="radio"]+label{
+    background:#fff;
+    border-color:#ccc;
+    color:#4c4c4c;
+}
+.diy-form input[type="radio"]:checked+label{
+    border-color:#E6AE30;
+    color:#E6AE30;
+}
+.diy-form input[type="radio"][disabled="disabled"]+label{
+    background:#ccc;
+    color:#eee;
+    border:1px dashed #aaa;
+    cursor:not-allowed;
+}
+
+
+
