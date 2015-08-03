@@ -204,20 +204,11 @@ $(function() {
            
     }
 
-    var disableRadioInput = function(radioInputArray){
-    	
-    	var radioInputs = $('input[name="ram"], input[name="flash"]');
-
-    	for (i in radioInputs) {
-    		radioInputs.eq(i).attr('disabled', false);
-    	};
+    var disableRadioInput = function(radioInputArray) {
+    	$('input[name="ram"], input[name="flash"]').attr('disabled', false);
 
     	for (i in radioInputArray) {
-    		radioInputs.each(function(e){
-    			if (radioInputArray[i] === $(this).attr('id')) {
-    				$(this).attr('disabled', true);
-    			}
-    		});
+    		$('#' + radioInputArray[i]).attr('disabled', true);
     	};
     };
 
